@@ -1,1 +1,1 @@
-# decentralised-social
+# Decentralised Social
