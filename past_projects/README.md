@@ -9,7 +9,7 @@ List the projects that you have worked on directly.
 
 ---
 
-In general, I have worked on many projects that are launched on a large scale, i.e. most of the projects are personal projects and done in a solo capacity. That is why I usually play the role of designer, developer and product manager.
+In general, I have not worked on many projects that are launched on a large scale, i.e. most of the projects are personal projects and done in a solo capacity. That is why I usually play the role of designer, developer and product manager.
 
 ### 1. NFT collection
 
