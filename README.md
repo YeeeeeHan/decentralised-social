@@ -2,4 +2,4 @@
 
 Past projects: `/past_projects`
 
-Task: `decentralise_social`
+Task: `/decentralise_social`
