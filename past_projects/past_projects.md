@@ -26,4 +26,10 @@ In general, I have worked on many projects that are launched on a large scale, i
 
    NFTracker is a Telegram bot that allows users to query the floor price of NFT collections on Opensea in a very simple manner, by typing the `/fp` command, followed by the collection name (more specifically the slug name on opensea). Understanding that there might be some typo errors in the names of the collections, the Golang backend server is connected to a Postgres database to store the official slug names of popular collections. When the bot receives an invalid slug name, it will reach into the Postgres database to find the collection with the closest manage, with the prompt "Did you mean...?". Users can click on the callback button and the message will be replaced with the relevant information of the correct collection.
 
+   I worked on this project alone. As the idea was pretty simple, the time from ideation to launch took about 3 weeks. What I liked about the project was that it is a simple yet effective tool that almost anyone can use it. Check it out here: https://t.me/NFTracker_bot
+
 3. Personal project - Minority Game
+
+   Minority game was inspired by an anime I once watched. The game gave players a question with 2 answers, and everyone would vote on either of the options. The voters belonging to the minority group would win the round and proceed on to the next stage. In this case, the idea is similar, but instead of votes, players would bet on the outcome by indicating their choice and transacting with the smart contrat. At the end of the game, players in the minority group would get their ethereum back, and the losers' pool would be distributed to the winners.
+
+   I worked on this project alone. The ideation to launch took about 3 weeks too, and it was a great project to cultivate a deeper understanding of smart contracts.

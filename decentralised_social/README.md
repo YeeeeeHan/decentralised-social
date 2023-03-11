@@ -7,7 +7,7 @@ You are tasked to build a decentralized Twitter, BE, FE, entire stack. And you a
 
 # Table of Contents
 
-1. Brief overview - List out some personal thoughts regarding the topic of decentralised social networks
+1. Brief overview
 2. Design process
 3. Tradeoffs and Final Thoughts
 
@@ -26,12 +26,15 @@ Being aware of the inherent differences between the decentralised and web2 produ
 I have identified 3 main benefits of social networks:
 
 1. Owning your audience and content
-   - your audience will follow you across different applications
-   - Users can monetize their own contents
-2. Prevents social discourse from being controlled by a small group of people - related to algorithm
-3. ZK proves - ability to say and prove something anonymously
 
-### Assumptions surrounding the task
+   The most prominent argument for social network is the ability to own your audience and content. Many people have built their livelihoods on social networks, but they do not truly own their contents and audience, as the social networks companies ultimately have the final say on which accounts can continue running. In decentralised social networks, users own their relationship with their audience. If certain clients decide to restrict their access to their followers, these users can migrate to other clients, bringing their audience over, as all these information are inscribed on the blockchain.
+
+2. Prevents social discourse from being controlled by a small group of people
+
+   Another strong argument against traditional social networks is the issue of social discourse being controlled by a small group of people who make the executive decisions. Some examples include Twitter banning journalists' accounts that posted links to the ElonJet account set up on Facebook - [source](https://www.theverge.com/2022/12/15/23512004/elon-musk-starts-banning-critical-journalists-from-twitter).
+
+3. ZK Proofs - ability to say and prove something anonymously
+   Since the decentralised social networks assumes that every user has a public private key, certain features surrounding ZK proofs could be integrated into the product, that allows users to say something anonymously yet credibly. For example, a doctor that has the credentials to comment on certain public health issues might be discouraged to do so if he has to reveal his credentials. But if his credentials can be verified via ZK proofs, such discourse might prove enticing for the public.
 
 # Design Process
 
@@ -39,24 +42,21 @@ I have identified 3 main benefits of social networks:
 
 Identity
 
-- Cross-platform identity
-- Claiming a unique username
+- **Cross-platform identity - Users should be able to**
+- Claiming a unique username - Users should be able to claim a unique username that maps to their blockchain addresses. The names are human-readable unlike blockchain addresses
 
 Tweets
 
-- Ability to create tweets
-- Ability to own your tweets
-- Ability to view tweets from a certain user
-- Ability to interact with tweets
+- Ability to create tweets - Users should be able to create tweets that will be published on the blockchain
+- Ability to own your tweets - The upload and edits of the tweets should only be able to be executed by the users and no one else, no even the platform developers
+- Ability to view tweets from a certain user - Viewing all the tweets from a certain user
+- Ability to interact with tweets - Tweet interactions include liking, commenting, and retweeting, or any other innovative interaction primitive
 
 Follow
 
-- Ability to follow/subscribers to another user
-- Ability to own your subsribers
-
-Feed
-
-- View feed according to a customised algorithm
+- Ability to follow to another user - Following another user subscribes
+- Abiility to view a feed of subscribed users - When users follow other users, their tweets should show up on their feeds
+- Ability to own your subsribers - Subscriber information should reside on the blockchain to make it immutable
 
 ## B) Non-functional Requirements
 
@@ -76,10 +76,6 @@ Eventual Consistency
 
 - Based on the CAP theorem and the above 2 requirements, we cannot guarantee a high level of consistency. However, this is not an issue because due to the nature of the home page feed feature, we do not have to show the most recent tweets as long as there is a high degree of availability. However, the system will strive to achieve eventual consistency, where users will be able to accurately query all the posts made by another user.
 
-Data load and storage
-
--
-
 ## C) System Design
 
 Application servers
@@ -88,13 +84,11 @@ Application servers
 
 Load balancer
 
-- Because clients will directly communicate to these application servers in order to
+- Load balancers will be used to efficiently distribute network traffic across different instances of backend application serers, to ensure high availability and reliability of the social network. It also provides the flexibility to add or subtract servers as demand dictates.
 
 Transaction relayers
 
-- Gasless transactions - higher conversion rate, easier user onboarding
-- Ensure reliability of actions
-- Batch transactions for lower gas
+- Intermediaries to handle the transmission of blockchain transactions. This service ensures the reliability of transactions, and could also allow gasless transactions in the beginning of the launch. This allows for an easier user onboarding experience and a higher conversion rate. Batching of transactions can also save or lower gas fees.
 
 Ethereum Name Service
 
@@ -125,8 +119,6 @@ CDN
 ## D) Front End
 
 To be honest, I am not really a UI/UX person, but I would say that for a start, the current twitter user experience is the quintessential way that short tweets can be consumed en masse. However, a way that our decentralized Twitter can stand out from the competition would be to include notifications and on-chain activities of other users that we follow. This would give users a more hollistic view of what is going on in their blockchain networks and physical networks literally.
-
-## E) Smart contract
 
 # Tradeoffs and Final Thoughts
 
