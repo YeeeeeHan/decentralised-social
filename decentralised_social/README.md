@@ -42,7 +42,6 @@ I have identified 3 main benefits of social networks:
 
 Identity
 
-- **Cross-platform identity - Users should be able to**
 - Claiming a unique username - Users should be able to claim a unique username that maps to their blockchain addresses. The names are human-readable unlike blockchain addresses
 
 Tweets
@@ -78,6 +77,8 @@ Eventual Consistency
 
 ## C) System Design
 
+![alt text](diagram.png)
+
 Application servers
 
 - Application servers will be hosted by traditional web2 hosting solutions. These servers will be responsible for directly serving request from users and their clients.
@@ -85,6 +86,7 @@ Application servers
 Load balancer
 
 - Load balancers will be used to efficiently distribute network traffic across different instances of backend application serers, to ensure high availability and reliability of the social network. It also provides the flexibility to add or subtract servers as demand dictates.
+- The load balancer also acts as a gateway to other services in the network such as distributed caches,
 
 Transaction relayers
 

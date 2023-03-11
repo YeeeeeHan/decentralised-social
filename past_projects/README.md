@@ -30,6 +30,8 @@ In general, I have worked on many projects that are launched on a large scale, i
 
 3. Personal project - Minority Game
 
+   ![alt text](3.png)
+
    Minority game was inspired by an anime I once watched. The game gave players a question with 2 answers, and everyone would vote on either of the options. The voters belonging to the minority group would win the round and proceed on to the next stage. In this case, the idea is similar, but instead of votes, players would bet on the outcome by indicating their choice and transacting with the smart contrat. At the end of the game, players in the minority group would get their ethereum back, and the losers' pool would be distributed to the winners.
 
-   I worked on this project alone. The ideation to launch took about 3 weeks too, and it was a great project to cultivate a deeper understanding of smart contracts.
+   I worked on this project alone. The ideation to launch took about 3 weeks too, and it was a great project to cultivate a deeper understanding of smart contracts. Check it out here: https://minority-game-dapp-front-end.vercel.app/
